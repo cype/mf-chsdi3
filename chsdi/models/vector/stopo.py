@@ -1993,3 +1993,21 @@ class ga25_polygon_main(Base, Vector):
                                dimension=2, srid=21781))
 
 register('ch.swisstopo.geologie-geologischer_atlas', ga25_polygon_main)
+
+class hist_topo_namen(Base, Vector):
+    __tablename__ = 'historische_topo_namen'
+    __table_args__ = ({'schema': 'public', 'autoload': False})
+    __template__ = 'templates/htmlpopup/historische_topo_namen.mako'
+    __bodId__ = 'ch.kantone.historische-topografische-namen'
+    id = Column('objectid', Integer, primary_key=True)
+    topographic_name = Column('topographic_name', Text)
+    relation_identifier = Column('relation_identifier', Integer)
+    category = Column('category', Text)
+    year_from = Column('year_from', Integer)
+    year_to = Column('year_to', Integer)
+    data_origin = Column('data_origin', Text)
+    old_topographic_names = Column('old_topographic_names', Text)
+    geodb_oid = Column('geodb_oid', Text)
+    the_geom = GeometryColumn(Geometry(dimension=2, srid=21781))
+
+register('ch.kantone.historische-topografische-namen', hist_topo_namen)
