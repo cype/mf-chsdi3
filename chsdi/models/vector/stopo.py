@@ -1999,6 +1999,7 @@ class hist_topo_namen(Base, Vector):
     __table_args__ = ({'schema': 'public', 'autoload': False})
     __template__ = 'templates/htmlpopup/historische_topo_namen.mako'
     __bodId__ = 'ch.kantone.historische-topografische-namen'
+    __extended_info__ = True
     id = Column('objectid', Integer, primary_key=True)
     topographic_name = Column('topographic_name', Text)
     relation_identifier = Column('relation_identifier', Integer)
