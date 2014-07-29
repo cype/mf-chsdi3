@@ -10,11 +10,13 @@
 
 <%def name="extended_info(c, lang)">
 <%
-    import urllib2
+    from pyramid.request import Request
     import json
 
-    response = urllib2.urlopen("http://mf-chsdi3.dev.bgdi.ch/ltfoa/rest/services/api/MapServer/find?layer=ch.kantone.historische-topografische-namen&searchText=%s&searchField=relation_identifier&returnGeometry=false&contains=false" % c['attributes']['relation_identifier'])
-    j = json.load(response)['results']
+    relationId = c['attributes']['relation_identifier']
+    subreq = Request.blank('/rest/services/api/MapServer/find?layer=ch.kantone.historische-topografische-namen&searchText=%s&searchField=relation_identifier&returnGeometry=false&contains=false' % relationId)
+    response = request.invoke_subrequest(subreq)
+    j = json.loads(response.body)['results']
     names = [t['attributes']['topographic_name'] for t in j]
     years = [t['attributes']['year_from'] for t in j]
     full = dict(zip(names, years))
