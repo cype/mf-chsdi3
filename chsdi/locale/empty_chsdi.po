@@ -5276,3 +5276,6 @@ msgstr ""
 
 msgid "ch.swisstopo-vd.ortschaftenverzeichnis_plz.langtext"
 msgstr ""
+
+msgid "tt_source"
+msgstr ""
