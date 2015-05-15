@@ -107,11 +107,14 @@ class TestFileView(TestsBase):
         resp = self.testapp.post('/files/%s' % file_id, new_content, headers=self.headers, status=200)
         new_admin_id = resp.json['adminId']
         new_file_id = resp.json['fileId']
+        modified_content = resp.body
 
         self.assertNotEqual(admin_id, new_admin_id)
         self.assertNotEqual(file_id, new_file_id)
 
+        # re-get first file
         resp = self.testapp.get('/files/%s' % file_id, headers=self.headers, status=200)
         orig_data = resp.body
-        self.assertNotEqual(orig_data, new_content)
+
         self.assertEqual(orig_data, VALID_KML)
+        self.assertNotEqual(orig_data, modified_content)
