@@ -4,7 +4,7 @@ import os.path
 import uuid
 import base64
 import time
-import zipfile
+import gzip
 import ConfigParser
 import StringIO
 
@@ -172,25 +172,29 @@ class FileView(object):
             'Access-Control-Allow-Credentials': 'true'})
         return ''
 
-    def _save_to_s3(self, data, mime, update=False, compress=False):
-        ziped_data = None
+    def _save_to_s3(self, data, mime, update=False, compress=True):
+        gziped_data = None
+        content_encoding = None
         if compress and mime == 'application/vnd.google-earth.kml+xml':
             tmp = StringIO.StringIO()
-            zf = zipfile.ZipFile(tmp, mode='w', compression=zipfile.ZIP_DEFLATED, )
             try:
-                zf.writestr('doc.kml', data)
-                mime = 'application/vnd.google-earth.kmz'
+                with gzip.GzipFile(fileobj=tmp, mode="w") as f:
+                    f.write(data)
+                content_encoding = 'gzip'
             finally:
-                zf.close()
-            ziped_data = tmp.getvalue()
+                f.close()
+            gziped_data = tmp.getvalue()
 
         if not update:
-            if ziped_data is not None:
-                data = ziped_data
+            if gziped_data is not None:
+                data = gziped_data
             try:
                 k = Key(self.bucket)
                 k.key = self.file_id
                 k.set_metadata('Content-Type', mime)
+                if content_encoding is not None:
+                    #k.set_metadata('Content-Encoding', content_encoding)
+                    k.content_encoding = content_encoding
                 k.set_contents_from_string(data, replace=False)
                 key = self.bucket.get_key(k.key)
                 last_updated = parse_ts(key.last_modified)
@@ -199,8 +203,8 @@ class FileView(object):
                 raise exc.HTTPInternalServerError('Cannot create file on S3')
         else:
             try:
-                if self.key.content_type == 'application/vnd.google-earth.kmz' and ziped_data is not None:
-                    data = ziped_data
+                if gziped_data is not None:
+                    data = gziped_data
                 self.key.set_contents_from_string(data, replace=True)
                 key = self.bucket.get_key(self.key.key)
                 last_updated = parse_ts(key.last_modified)

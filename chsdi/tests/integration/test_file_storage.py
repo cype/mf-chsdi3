@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
+import gzip
+import StringIO
 from chsdi.tests.integration import TestsBase
 
 
@@ -30,11 +32,22 @@ NOT_WELL_FORMED_KML = '''<?xml version="1.0" encoding="UTF-8"?>
 </kml>'''
 
 
+def gunzip_data(gzipped):
+    infile = StringIO.StringIO()
+    infile.write(gzipped)
+    infile.seek(0)
+    with gzip.GzipFile(fileobj=infile, mode="r") as f:
+        f.rewind()
+        out = f.read()
+    return out
+
+
 class TestFileView(TestsBase):
 
     def setUp(self):
         super(TestFileView, self).setUp()
         self.headers = {'Content-Type': 'application/vnd.google-earth.kml+xml',
+                        'Accept-Encoding': 'gzip,deflate',
                         'X-SearchServer-Authorized': 'true'}
 
     def test_create_kml(self):
@@ -99,7 +112,7 @@ class TestFileView(TestsBase):
 
         # get file
         resp = self.testapp.get('/files/%s' % file_id, headers=self.headers, status=200)
-        orig_data = resp.body
+        orig_data = gunzip_data(resp.body)
         self.assertEqual(orig_data, VALID_KML)
 
         # update with file_id, should copy
