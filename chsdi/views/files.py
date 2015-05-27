@@ -8,12 +8,9 @@ import zipfile
 import ConfigParser
 import StringIO
 
-from boto.dynamodb2.table import Table
-from boto.dynamodb2 import connect_to_region
 from boto.dynamodb2.exceptions import ItemNotFound
 
-#from chsdi.models.clientdata_dynamodb import get_table
-
+from boto.exception import S3ResponseError
 from boto.s3.connection import S3Connection
 from boto.s3.key import Key
 from boto.utils import parse_ts
@@ -22,31 +19,12 @@ from pyramid.view import view_config, view_defaults
 import pyramid.httpexceptions as exc
 from pyramid.response import Response
 
+from chsdi.models.clientdata_dynamodb import get_dynamodb_table
 from chsdi.lib.decorators import requires_authorization, validate_kml_input
 
 
-def _get_dynamodb_table():
-    PROFILE_NAME = 'Credentials'
-    DYNAMODB_TABLE_NAME = 'geoadmin-file-storage'
-    user_cfg = os.path.join(os.path.expanduser("~"), '.boto')
-    config = ConfigParser.ConfigParser()
-    config.read(["/etc/boto.cfg", user_cfg])
-
-    access_key = config.get(PROFILE_NAME, 'aws_access_key_id')
-    secret_key = config.get(PROFILE_NAME, 'aws_secret_access_key')
-
-    conn = connect_to_region('eu-west-1', aws_access_key_id=access_key,
-                             aws_secret_access_key=secret_key)
-
-    table = Table(DYNAMODB_TABLE_NAME, connection=conn)
-
-    return table
-
-
-    # return get_table(table_name='geoadmin-file-storage')
-
 def _add_item(id, file_id=False):
-    table = _get_dynamodb_table()
+    table = get_dynamodb_table('geoadmin-file-storage')
     try:
         table.put_item(
             data={
@@ -56,12 +34,12 @@ def _add_item(id, file_id=False):
             }
         )
     except Exception as e:
-            raise exc.HTTPBadRequest('Error during put item %s' % e)
+        raise exc.HTTPBadRequest('Error during put item %s' % e)
     return True
 
 
 def _save_item(admin_id, file_id=None, last_updated=None):
-    table = _get_dynamodb_table()
+    table = get_dynamodb_table('geoadmin-file-storage')
     item = None
     if last_updated is not None:
         timestamp = last_updated.strftime('%Y-%m-%d %X')
@@ -78,7 +56,7 @@ def _save_item(admin_id, file_id=None, last_updated=None):
                 }
             )
         except Exception as e:
-                raise exc.HTTPBadRequest('Error during put item %s' % e)
+            raise exc.HTTPBadRequest('Error during put item %s' % e)
         return True
 
     else:
@@ -94,7 +72,7 @@ def _save_item(admin_id, file_id=None, last_updated=None):
 
 
 def _is_admin_id(admin_id):
-    table = _get_dynamodb_table()
+    table = get_dynamodb_table('geoadmin-file-storage')
     try:
         table.get_item(adminId=str(admin_id))
     except ItemNotFound:
@@ -105,7 +83,7 @@ def _is_admin_id(admin_id):
 
 def _get_file_id_from_admin_id(admin_id):
     fileId = None
-    table = _get_dynamodb_table()
+    table = get_dynamodb_table('geoadmin-file-storage')
     try:
         item = table.get_item(adminId=str(admin_id))
         fileId = item.get('fileId')
@@ -133,8 +111,11 @@ class FileView(object):
                 self.file_id = id
             try:
                 key = self.bucket.get_key(self.file_id)
-            except:
-                raise exc.HTTPInternalServerError('Cannot access file with id=%s' % self.file_id)
+            except S3ResponseError as e:
+                raise exc.HTTPInternalServerError('Cannot access file with id=%s: %s' % (self.file_id, e))
+            except Exception as e:
+                raise exc.HTTPInternalServerError('Cannot access file with id=%s: %s' % (self.file_id, e))
+
             if key is not None:
                 self.key = key
             else:
@@ -195,8 +176,8 @@ class FileView(object):
                 key = self.bucket.get_key(k.key)
                 last_updated = parse_ts(key.last_modified)
                 _save_item(self.admin_id, file_id=self.file_id, last_updated=last_updated)
-            except:
-                raise exc.HTTPInternalServerError('Cannot create file on S3')
+            except Exception as e:
+                raise exc.HTTPInternalServerError('Cannot create file on S3 %s' % e)
         else:
             try:
                 if self.key.content_type == 'application/vnd.google-earth.kmz' and ziped_data is not None:
@@ -205,8 +186,8 @@ class FileView(object):
                 key = self.bucket.get_key(self.key.key)
                 last_updated = parse_ts(key.last_modified)
                 _save_item(self.admin_id, last_updated=last_updated)
-            except:
-                raise exc.HTTPInternalServerError('Cannot update file on S3')
+            except Exception as e:
+                raise exc.HTTPInternalServerError('Cannot update file on S3 %s' % e)
 
     @view_config(route_name='files_collection', request_method='POST')
     @requires_authorization()
@@ -228,8 +209,8 @@ class FileView(object):
             else:
                 data = self.key.get_contents_as_string()
                 return Response(data, content_type=self.key.content_type)
-        except:
-            raise exc.HTTPNotFound('File %s not found' % self.file_id)
+        except Exception as e:
+            raise exc.HTTPNotFound('File %s not found %s' % (self.file_id, e))
 
     @view_config(request_method='POST')
     @requires_authorization()
@@ -243,8 +224,8 @@ class FileView(object):
                 self._save_to_s3(data, mime, update=True)
 
                 return {'adminId': self.admin_id, 'fileId': self.file_id, 'status': 'updated'}
-            except:
-                raise exc.HTTPInternalServerError('Cannot update file with id=%s' % self.admin_id)
+            except Exception as e:
+                raise exc.HTTPInternalServerError('Cannot update file with id=%s %s' % (self.admin_id, e))
         else:
             # Fork file, get new file ids
             self.file_id = self._get_uuid()
@@ -263,8 +244,8 @@ class FileView(object):
             try:
                 self.bucket.delete_key(self.key)
                 return {'success': True}
-            except:
-                raise exc.HTTPInternalServerError('Error while deleting file %s' % self.file_id)
+            except Exception as e:
+                raise exc.HTTPInternalServerError('Error while deleting file %s. %e' % (self.file_id, e))
         else:
             raise exc.HTTPUnauthorized('You are not authorized to delete file %s' % self.file_id)
 
@@ -273,5 +254,6 @@ class FileView(object):
         # TODO: doesn't seem to be applied
         self.request.response.headers.update({
             'Access-Control-Allow-Methods': 'POST,GET,DELETE,OPTIONS',
-            'Access-Control-Allow-Credentials': 'true'})
+            'Access-Control-Allow-Credentials': 'true'
+        })
         return ''
