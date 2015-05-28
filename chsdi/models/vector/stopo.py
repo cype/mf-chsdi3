@@ -1994,6 +1994,7 @@ class ga25_polygon_main(Base, Vector):
 
 register('ch.swisstopo.geologie-geologischer_atlas', ga25_polygon_main)
 
+
 class hist_topo_namen(Base, Vector):
     __tablename__ = 'historische_topo_namen'
     __table_args__ = ({'schema': 'public', 'autoload': False})
@@ -2009,6 +2010,7 @@ class hist_topo_namen(Base, Vector):
     data_origin = Column('data_origin', Text)
     old_topographic_names = Column('old_topographic_names', Text)
     geodb_oid = Column('geodb_oid', Text)
-    the_geom = GeometryColumn(Geometry(dimension=2, srid=21781))
+    the_geom = Column(Geometry(geometry_type='GEOMETRY',
+                               dimension=2, srid=21781))
 
 register('ch.kantone.historische-topografische-namen', hist_topo_namen)
