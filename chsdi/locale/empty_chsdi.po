@@ -946,49 +946,49 @@ msgstr ""
 msgid "ch.swisstopo.kt.url"
 msgstr ""
 
-msgid "gsch_n"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.gsch_n"
 msgstr ""
 
-msgid "lk"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.lk"
 msgstr ""
 
-msgid "lage"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.lage"
 msgstr ""
 
-msgid "fn"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.fn"
 msgstr ""
 
-msgid "hmax"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmax"
 msgstr ""
 
-msgid "hmin"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmin"
 msgstr ""
 
-msgid "hmed"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmed"
 msgstr ""
 
-msgid "exp"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.exp"
 msgstr ""
 
-msgid "form"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.form"
 msgstr ""
 
-msgid "geologie_fr_de"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.geologie_fr_de"
 msgstr ""
 
-msgid "platz"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.platz"
 msgstr ""
 
-msgid "fluss"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.fluss"
 msgstr ""
 
-msgid "station"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.station"
 msgstr ""
 
-msgid "institut"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.institut"
 msgstr ""
 
-msgid "amt"
+msgid "ch.bafu.feststoffe-geschiebemessnetz.amt"
 msgstr ""
 
 msgid "abteilung"
@@ -3121,64 +3121,64 @@ msgstr ""
 msgid "punktname"
 msgstr ""
 
-msgid "mqn_jahr"
+msgid "ch.bafu.mittlere-abfluesse.mqn_jahr"
 msgstr ""
 
-msgid "mqn_jan"
+msgid "ch.bafu.mittlere-abfluesse.mqn_jan"
 msgstr ""
 
-msgid "mqn_feb"
+msgid "ch.bafu.mittlere-abfluesse.mqn_feb"
 msgstr ""
 
-msgid "mqn_mar"
+msgid "ch.bafu.mittlere-abfluesse.mqn_mar"
 msgstr ""
 
-msgid "mqn_apr"
+msgid "ch.bafu.mittlere-abfluesse.mqn_apr"
 msgstr ""
 
-msgid "mqn_mai"
+msgid "ch.bafu.mittlere-abfluesse.mqn_mai"
 msgstr ""
 
-msgid "mqn_jun"
+msgid "ch.bafu.mittlere-abfluesse.mqn_jun"
 msgstr ""
 
-msgid "mqn_jul"
+msgid "ch.bafu.mittlere-abfluesse.mqn_jul"
 msgstr ""
 
-msgid "mqn_aug"
+msgid "ch.bafu.mittlere-abfluesse.mqn_aug"
 msgstr ""
 
-msgid "mqn_sep"
+msgid "ch.bafu.mittlere-abfluesse.mqn_sep"
 msgstr ""
 
-msgid "mqn_okt"
+msgid "ch.bafu.mittlere-abfluesse.mqn_okt"
 msgstr ""
 
-msgid "mqn_nov"
+msgid "ch.bafu.mittlere-abfluesse.mqn_nov"
 msgstr ""
 
-msgid "mqn_dez"
+msgid "ch.bafu.mittlere-abfluesse.mqn_dez"
 msgstr ""
 
-msgid "regimetyp"
+msgid "ch.bafu.mittlere-abfluesse.regimetyp"
 msgstr ""
 
-msgid "regimenummer"
+msgid "ch.bafu.mittlere-abfluesse.regimenummer"
 msgstr ""
 
-msgid "abflussvar"
+msgid "ch.bafu.mittlere-abfluesse.abflussvar"
 msgstr ""
 
 msgid "schluesselid"
 msgstr ""
 
-msgid "typ_fr_de"
+msgid "ch.bafu.wasserbau-querprofilmarken.typ"
 msgstr ""
 
 msgid "azimut"
 msgstr ""
 
-msgid "herkunft"
+msgid "ch.bafu.wasserbau-querprofilmarken.herkunft"
 msgstr ""
 
 msgid "status"

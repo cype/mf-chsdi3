@@ -293,9 +293,6 @@ msgstr "Si"
 msgid "abfluss"
 msgstr "Portata m3/s"
 
-msgid "abflussvar"
-msgstr "Variabilité du débit (%)"
-
 msgid "abfrage"
 msgstr "Requête de données"
 
@@ -319,9 +316,6 @@ msgstr "Données actuelles et historiques"
 
 msgid "alexandria"
 msgstr "Indicazioni bibliografiche"
-
-msgid "amt"
-msgstr "Office"
 
 msgid "anzahlaudits"
 msgstr "Numero di audit superati"
@@ -1163,6 +1157,51 @@ msgstr "Corridoi faunistici sovraregionale"
 msgid "ch.bafu.feststoffe-geschiebemessnetz"
 msgstr "SOLID fédéral, alluvions fluv."
 
+msgid "ch.bafu.feststoffe-geschiebemessnetz.amt"
+msgstr "Office"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.exp"
+msgstr "Exposition"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.fluss"
+msgstr "Nom du cours d'eau"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.fn"
+msgstr "Surface du bassin versant en km2"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.form"
+msgstr "Facteur de forme L²/F"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.geologie_fr_de"
+msgstr "Géologie"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.gsch_n"
+msgstr "Identificatif du dépotoire"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmax"
+msgstr "Hauteur maximale du bassin versant (m)"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmed"
+msgstr "Hauteur moyenne du bassin versant (m)"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmin"
+msgstr "Hauteur minimale du bassin versant (m)"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.institut"
+msgstr "Institution"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.lage"
+msgstr "Zone géographique"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.lk"
+msgstr "Numéro de la carte topographique nationale"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.platz"
+msgstr "Place de dépôt "
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.station"
+msgstr "Nom de la station de mesure"
+
 msgid "ch.bafu.fischerei-aeschen_kernzonen"
 msgstr "Temoli: zone centrali"
 
@@ -1550,6 +1589,54 @@ msgstr "Percentuale di bosco (IFN)"
 msgid "ch.bafu.mittlere-abfluesse"
 msgstr "Débit naturel (m³/s)"
 
+msgid "ch.bafu.mittlere-abfluesse.abflussvar"
+msgstr "Variabilité du débit (%)"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_apr"
+msgstr "Q avr"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_aug"
+msgstr "Q aoû"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_dez"
+msgstr "Q déc"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_feb"
+msgstr "Q fév"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jahr"
+msgstr "Q annuel"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jan"
+msgstr "Q jan"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jul"
+msgstr "Q jul"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jun"
+msgstr "Q jun"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_mai"
+msgstr "Q mai"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_mar"
+msgstr "Q mar"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_nov"
+msgstr "Q nov"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_okt"
+msgstr "Q oct"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_sep"
+msgstr "Q sep"
+
+msgid "ch.bafu.mittlere-abfluesse.regimenummer"
+msgstr "Numéro de regime"
+
+msgid "ch.bafu.mittlere-abfluesse.regimetyp"
+msgstr "Type de régime"
+
 msgid "ch.bafu.moose"
 msgstr "Liste rosse muschi"
 
@@ -1924,6 +2011,12 @@ msgstr "Emissari dei bacini imbriferi"
 
 msgid "ch.bafu.wasserbau-querprofilmarken"
 msgstr "Point fixe du profil en travers"
+
+msgid "ch.bafu.wasserbau-querprofilmarken.herkunft"
+msgstr "Origine"
+
+msgid "ch.bafu.wasserbau-querprofilmarken.typ"
+msgstr "Type"
 
 msgid "ch.bafu.wasserbau-vermessungsstrecken"
 msgstr "Tronçon mesuré"
@@ -3371,110 +3464,145 @@ msgstr "Type milieu récepteur"
 msgid "ch_bafu_gee-kla.vsa_kategorie"
 msgstr "Type de traitement (catégorie VSA)"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Anz_Jahre"
-msgstr "Nombre d´années"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Anz_Jahre"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Beeinflussung"
-msgstr "Influences NQ"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Beeinflussung"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Beginn"
-msgstr "Début de période"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Beginn"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Ende"
-msgstr "Fin de période"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Ende"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.GEBFLAECHE"
-msgstr "Surface du bassin versant [km2]"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.GEBFLAECHE"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Genauigkeit"
-msgstr "Précision NQ"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Genauigkeit"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDX"
-msgstr "Coordonnée X"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDX"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDY"
-msgstr "Coordonnée Y"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDY"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.KennNr"
-msgstr "Numéro"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.KennNr"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NAME"
-msgstr "Nom de la station"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NAME"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q10"
-msgstr "NM14Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q100"
-msgstr "NM14Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q2"
-msgstr "NM14Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q20"
-msgstr "NM14Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q5"
-msgstr "NM14Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q50"
-msgstr "NM14Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q10"
-msgstr "NM1Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q100"
-msgstr "NM1Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q2"
-msgstr "NM1Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q20"
-msgstr "NM1Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q5"
-msgstr "NM1Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q50"
-msgstr "NM1Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q10"
-msgstr "NM30Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q100"
-msgstr "NM30Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q2"
-msgstr "NM30Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q20"
-msgstr "NM30Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q5"
-msgstr "NM30Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q50"
-msgstr "NM30Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q10"
-msgstr "NM7Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q100"
-msgstr "NM7Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q2"
-msgstr "NM7Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q20"
-msgstr "NM7Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q5"
-msgstr "NM7Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q50"
-msgstr "NM7Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.hyperlink"
-msgstr "Lien en français"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.hyperlink"
 
 msgid "ch_bafu_hydrologie_q347.BasisID"
 msgstr "Nr. bassin de base"
@@ -3554,38 +3682,49 @@ msgstr "Lien vers la vue d´ensemble"
 msgid "ch_bafu_wasserbau_vermessungsstrecken.anfangsmass"
 msgstr "Mesure_début"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.anzahl_profile"
-msgstr "Nombre_profils"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.anzahl_profile"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_intervall"
-msgstr "Interval_levé"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_intervall"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_letzte"
-msgstr "Dernier_levé"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_letzte"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.bemerkung"
-msgstr "Remarque"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.bemerkung"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.bezeichnung"
-msgstr "Déscription"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.bezeichnung"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.endmass"
-msgstr "Mesure_fin"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.endmass"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.gewaessernummer"
-msgstr "No_cours_d_eau"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.gewaessernummer"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.gwlnr"
-msgstr "Numéro du cours d´eau"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.gwlnr"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.laenge_km"
-msgstr "Longitude_KM"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.laenge_km"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.routeid"
-msgstr "Route_ID"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.routeid"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.streckenid"
-msgstr "Tronçon_ID"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.streckenid"
 
 msgid "city_name"
 msgstr "Nom de la localité"
@@ -3728,9 +3867,6 @@ msgstr "Anomalia Bouguer [mGal]"
 msgid "et_fromatt_ch"
 msgstr "Anomalia aeromagnetica, Svizzera [nT]"
 
-msgid "exp"
-msgstr "Exposition"
-
 msgid "faktenblatt"
 msgstr "Scheda informativa"
 
@@ -3769,15 +3905,6 @@ msgstr "Surface [m2]"
 
 msgid "fliessgewaesser"
 msgstr "Cours d'eau"
-
-msgid "fluss"
-msgstr "Nom du cours d'eau"
-
-msgid "fn"
-msgstr "Surface du bassin versant en km2"
-
-msgid "form"
-msgstr "Facteur de forme L²/F"
 
 msgid "format_de"
 msgstr "Formati disponibili"
@@ -3854,9 +3981,6 @@ msgstr "Tekonische Einheit"
 msgid "geol_f"
 msgstr "Unità"
 
-msgid "geologie_fr_de"
-msgstr "Géologie"
-
 msgid "geometalink"
 msgstr "Géomètre-conservateur, registre foncier, autres métadonnées"
 
@@ -3917,17 +4041,11 @@ msgstr "Téléphone"
 msgid "grundurl"
 msgstr "E-mail / Internet"
 
-msgid "gsch_n"
-msgstr "Identificatif du dépotoire"
-
 msgid "help title"
 msgstr "Aiuto"
 
 msgid "help url"
 msgstr "http://www.geo.admin.ch/internet/geoportal/it/commons/help/viewer_help.html"
-
-msgid "herkunft"
-msgstr "Origine"
 
 msgid "hersteller"
 msgstr "Fabricant"
@@ -3937,15 +4055,6 @@ msgstr "Chiudere la barra dei temi"
 
 msgid "hier"
 msgstr "Qui"
-
-msgid "hmax"
-msgstr "Hauteur maximale du bassin versant (m)"
-
-msgid "hmed"
-msgstr "Hauteur moyenne du bassin versant (m)"
-
-msgid "hmin"
-msgstr "Hauteur minimale du bassin versant (m)"
 
 msgid "hoehe_see"
 msgstr "Altitude du plan d'eau [m]"
@@ -4015,9 +4124,6 @@ msgstr "Informazioni"
 
 msgid "installierteleistung"
 msgstr "Puissance installée"
-
-msgid "institut"
-msgstr "Institution"
 
 msgid "intern"
 msgstr "Interno"
@@ -4649,9 +4755,6 @@ msgstr "Lunghezza [m]"
 msgid "laenge_strecke_m"
 msgstr "Longueur du tronçon [m]"
 
-msgid "lage"
-msgstr "Zone géographique"
-
 msgid "lage_objekt"
 msgstr "Situation de l’objet par rapport au sol"
 
@@ -4709,9 +4812,6 @@ msgstr "Description detaillee"
 msgid "linkzurlegende"
 msgstr "Lien vers la légende"
 
-msgid "lk"
-msgstr "Numéro de la carte topographique nationale"
-
 msgid "lokal"
 msgstr "Importanza locale"
 
@@ -4750,45 +4850,6 @@ msgstr "Modèle"
 
 msgid "modif_validfrom"
 msgstr "Data della decisione"
-
-msgid "mqn_apr"
-msgstr "Q avr"
-
-msgid "mqn_aug"
-msgstr "Q aoû"
-
-msgid "mqn_dez"
-msgstr "Q déc"
-
-msgid "mqn_feb"
-msgstr "Q fév"
-
-msgid "mqn_jahr"
-msgstr "Q annuel"
-
-msgid "mqn_jan"
-msgstr "Q jan"
-
-msgid "mqn_jul"
-msgstr "Q jul"
-
-msgid "mqn_jun"
-msgstr "Q jun"
-
-msgid "mqn_mai"
-msgstr "Q mai"
-
-msgid "mqn_mar"
-msgstr "Q mar"
-
-msgid "mqn_nov"
-msgstr "Q nov"
-
-msgid "mqn_okt"
-msgstr "Q oct"
-
-msgid "mqn_sep"
-msgstr "Q sep"
 
 msgid "municipality"
 msgstr "Comuni toccati"
@@ -4940,9 +5001,6 @@ msgstr "Perimètre [m]"
 msgid "physischvirtuell"
 msgstr "Physique-virtuel"
 
-msgid "platz"
-msgstr "Place de dépôt "
-
 msgid "plz"
 msgstr "NPA"
 
@@ -4981,12 +5039,6 @@ msgstr "Standard de qualité"
 
 msgid "raeumliche_qualitaeten"
 msgstr "Qualità spaziali"
-
-msgid "regimenummer"
-msgstr "Numéro de regime"
-
-msgid "regimetyp"
-msgstr "Type de régime"
 
 msgid "regional"
 msgstr "Importanza regionale"
@@ -5077,9 +5129,6 @@ msgstr "http://www.seismo.ethz.ch/index_IT"
 
 msgid "stand"
 msgstr "Etat"
-
-msgid "station"
-msgstr "Nom de la station de mesure"
 
 msgid "stationsname"
 msgstr "Nom de la station"
@@ -6229,9 +6278,6 @@ msgstr "http://www.twitter.com/swiss_geoportal"
 
 msgid "typ"
 msgstr "Tipo"
-
-msgid "typ_fr_de"
-msgstr "Type"
 
 msgid "typ_kraftwerk"
 msgstr "Type de d’usine électrique"

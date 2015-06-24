@@ -1,15 +1,16 @@
 <%inherit file="base.mako"/>
 
 <%def name="table_body(c, lang)">
+<% c['stable_id'] = True %>
 <%
     lang = 'fr' if lang in ('fr', 'it') else 'de'
 %>
-<tr><td class="cell-left">${_('gsch_n')}</td><td>${c['attributes']['gsch_n']}</td></tr>
-<tr><td class="cell-left">${_('geologie_fr_de')}</td><td>${c['attributes']['geologie']}</td></tr>
-<tr><td class="cell-left">${_('fluss')}</td><td>${c['attributes']['fluss']}</td></tr>
-<tr><td class="cell-left">${_('station')}</td><td>${c['attributes']['station']}</td></tr>
-<tr><td class="cell-left">${_('institut')}</td><td>${c['attributes']['institut']}</td></tr>
-<tr><td class="cell-left">${_('amt')}</td><td>${c['attributes']['amt']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.gsch_n')}</td><td>${c['attributes']['gsch_n']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.geologie_fr_de')}</td><td>${c['attributes']['geologie']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.fluss')}</td><td>${c['attributes']['fluss']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.station')}</td><td>${c['attributes']['station']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.institut')}</td><td>${c['attributes']['institut']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.amt')}</td><td>${c['attributes']['amt']}</td></tr>
 <tr><td class="cell-left">${_('link')}</td>
     <td>
     % if c['attributes']['pdf_file']:
@@ -38,15 +39,15 @@
 <td>${int(c['attributes']['hochwert']) or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('gsch_n')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.gsch_n')}</th>
 <td>${c['attributes']['gsch_n'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('lk')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.lk')}</th>
 <td>${c['attributes']['lk'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('lage')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.lage')}</th>
     % if lang in ('fr','it'):
 <td>${c['attributes']['lage_fr'] or '-'}</td>
     % else:
@@ -54,35 +55,35 @@
     %endif
 </tr>
 <tr>
-<th class="cell-left">${_('fn')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.fn')}</th>
 <td>${c['attributes']['fn'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('hmax')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.hmax')}</th>
 <td>${c['attributes']['hmax'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('hmin')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.hmin')}</th>
 <td>${c['attributes']['hmin'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('hmed')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.hmed')}</th>
 <td>${c['attributes']['hmed'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('exp')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.exp')}</th>
 <td>${c['attributes']['exp'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('form')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.form')}</th>
 <td>${c['attributes']['form'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('geologie_fr_de')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.geologie_fr_de')}</th>
 <td>${c['attributes']['geologie'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('platz')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.platz')}</th>
     % if lang in ('fr','it'):
 <td>${c['attributes']['platz_fr'] or '-'}</td>
     % else:
@@ -90,19 +91,19 @@
     %endif
 </tr>
 <tr>
-<th class="cell-left">${_('fluss')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.fluss')}</th>
 <td>${c['attributes']['fluss'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('station')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.station')}</th>
 <td>${c['attributes']['station'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('institut')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.institut')}</th>
 <td>${c['attributes']['institut'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('amt')}</th>
+<th class="cell-left">${_('ch.bafu.feststoffe-geschiebemessnetz.amt')}</th>
 <td>${c['attributes']['amt'] or '-'}</td>
 </tr>
 <tr>

@@ -6,11 +6,11 @@
 %>
 <tr><td
 class="cell-left">${_('schluesselid')}</td><td>${c['attributes']['schluesselid']}</td></tr>
-<tr><td class="cell-left">${_('typ_fr_de')}</td><td>${c['attributes']['typ']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.wasserbau-querprofilmarken.typ')}</td><td>${c['attributes']['typ']}</td></tr>
 <tr><td class="cell-left">${_('x')}</td><td>${round(c['attributes']['x_koordinate'],2)}</td></tr>
 <tr><td class="cell-left">${_('y')}</td><td>${round(c['attributes']['y_koordinate'],2)}</td></tr>
 <tr><td class="cell-left">${_('azimut')}</td><td>${c['attributes']['azimut']}</td></tr>
-<tr><td class="cell-left">${_('herkunft')}</td><td>${c['attributes']['herkunft']}</td></tr>
+<tr><td class="cell-left">${_('ch.bafu.wasserbau-querprofilmarken.herkunft')}</td><td>${c['attributes']['herkunft']}</td></tr>
 </%def>
 
 <%def name="extended_info(c, lang)">
@@ -27,7 +27,7 @@ class="cell-left">${_('schluesselid')}</td><td>${c['attributes']['schluesselid']
 <td>${c['attributes']['schluesselid'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('typ_fr_de')}</th>
+<th class="cell-left">${_('ch.bafu.wasserbau-querprofilmarken.typ')}</th>
 <td>${c['attributes']['typ'] or '-'}</td>
 </tr>
 <tr>
@@ -43,7 +43,7 @@ class="cell-left">${_('schluesselid')}</td><td>${c['attributes']['schluesselid']
 <td>${c['attributes']['azimut'] or '-'}</td>
 </tr>
 <tr>
-<th class="cell-left">${_('herkunft')}</th>
+<th class="cell-left">${_('ch.bafu.wasserbau-querprofilmarken.herkunft')}</th>
 <td>${c['attributes']['herkunft'] or '-'}</td>
 </tr>
 <tr>

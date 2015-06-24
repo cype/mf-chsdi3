@@ -293,9 +293,6 @@ msgstr "Yes"
 msgid "abfluss"
 msgstr "Discharge m3/s"
 
-msgid "abflussvar"
-msgstr "Abflussvariabilität (%)"
-
 msgid "abfrage"
 msgstr "Datenbfrage"
 
@@ -319,9 +316,6 @@ msgstr "Current and previous data"
 
 msgid "alexandria"
 msgstr "Bibliographical informations"
-
-msgid "amt"
-msgstr "Amt"
 
 msgid "anzahlaudits"
 msgstr "Number of successful audits"
@@ -1163,6 +1157,51 @@ msgstr "Interregional wildlife corridor"
 msgid "ch.bafu.feststoffe-geschiebemessnetz"
 msgstr "SOLID Bund, Geschiebe"
 
+msgid "ch.bafu.feststoffe-geschiebemessnetz.amt"
+msgstr "Amt"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.exp"
+msgstr "Exposition"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.fluss"
+msgstr "Flussname"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.fn"
+msgstr "Einzugsgebietsgrösse in km2"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.form"
+msgstr "Formfaktor L²/F"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.geologie_fr_de"
+msgstr "Geologie"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.gsch_n"
+msgstr "Identifikation des Geschiebesammlers"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmax"
+msgstr "Höchster Punkt im Einzugsgebiet (m)"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmed"
+msgstr "Mittlere Höhe des Einzugsgebietes (m)"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.hmin"
+msgstr "Tiefster Punkt im Einzugsgebiet (m)"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.institut"
+msgstr "Institut"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.lage"
+msgstr "Geographische Lage "
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.lk"
+msgstr "Nummer des Landeskartenblattes "
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.platz"
+msgstr "Ablagerungsplatz"
+
+msgid "ch.bafu.feststoffe-geschiebemessnetz.station"
+msgstr "Name der Messstation"
+
 msgid "ch.bafu.fischerei-aeschen_kernzonen"
 msgstr "Graylings: core areas"
 
@@ -1550,6 +1589,54 @@ msgstr "Percentage of forest area (NFI)"
 msgid "ch.bafu.mittlere-abfluesse"
 msgstr "Mittlere Abflüsse (m³/s)"
 
+msgid "ch.bafu.mittlere-abfluesse.abflussvar"
+msgstr "Abflussvariabilität (%)"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_apr"
+msgstr "Q Apr"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_aug"
+msgstr "Q Aug"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_dez"
+msgstr "Q Dez"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_feb"
+msgstr "Q Feb"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jahr"
+msgstr "Q Jahr"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jan"
+msgstr "Q Jan"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jul"
+msgstr "Q Jul"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_jun"
+msgstr "Q Jun"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_mai"
+msgstr "Q Mai"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_mar"
+msgstr "Q Mar"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_nov"
+msgstr "Q Nov"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_okt"
+msgstr "Q Okt"
+
+msgid "ch.bafu.mittlere-abfluesse.mqn_sep"
+msgstr "Q Sep"
+
+msgid "ch.bafu.mittlere-abfluesse.regimenummer"
+msgstr "Regimenummer"
+
+msgid "ch.bafu.mittlere-abfluesse.regimetyp"
+msgstr "Regimetyp"
+
 msgid "ch.bafu.moose"
 msgstr "Red list bryophytes"
 
@@ -1924,6 +2011,12 @@ msgstr "Receiving watercourses"
 
 msgid "ch.bafu.wasserbau-querprofilmarken"
 msgstr "Querprofilmarke"
+
+msgid "ch.bafu.wasserbau-querprofilmarken.herkunft"
+msgstr "Herkunft"
+
+msgid "ch.bafu.wasserbau-querprofilmarken.typ"
+msgstr "Typ"
 
 msgid "ch.bafu.wasserbau-vermessungsstrecken"
 msgstr "Vermessungsstrecken"
@@ -3372,110 +3465,145 @@ msgstr "Vorflutertyp"
 msgid "ch_bafu_gee-kla.vsa_kategorie"
 msgstr "Reinigungstyp (VSA-Kategorie)"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Anz_Jahre"
-msgstr "Anzahl Jahre"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Anz_Jahre"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Beeinflussung"
-msgstr "Beeinflussung NQ"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Beeinflussung"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Beginn"
-msgstr "Periodenbeginn"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Beginn"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Ende"
-msgstr "Periodenende"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Ende"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.GEBFLAECHE"
-msgstr "Einzugsgebietsfläche [km2]"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.GEBFLAECHE"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.Genauigkeit"
-msgstr "Genauigkeit NQ"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.Genauigkeit"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDX"
-msgstr "x-Koordinate"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDX"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDY"
-msgstr "y-Koordinate"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.KOORDY"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.KennNr"
-msgstr "Nummer"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.KennNr"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NAME"
-msgstr "Name der Station"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NAME"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q10"
-msgstr "NM14Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q100"
-msgstr "NM14Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q2"
-msgstr "NM14Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q20"
-msgstr "NM14Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q5"
-msgstr "NM14Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q50"
-msgstr "NM14Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM14Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q10"
-msgstr "NM1Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q100"
-msgstr "NM1Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q2"
-msgstr "NM1Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q20"
-msgstr "NM1Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q5"
-msgstr "NM1Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q50"
-msgstr "NM1Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM1Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q10"
-msgstr "NM30Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q100"
-msgstr "NM30Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q2"
-msgstr "NM30Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q20"
-msgstr "NM30Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q5"
-msgstr "NM30Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q50"
-msgstr "NM30Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM30Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q10"
-msgstr "NM7Q10"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q10"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q100"
-msgstr "NM7Q100"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q100"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q2"
-msgstr "NM7Q2"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q2"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q20"
-msgstr "NM7Q20"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q20"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q5"
-msgstr "NM7Q5"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q5"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q50"
-msgstr "NM7Q50"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.NM7Q50"
 
+#. TODO
 msgid "ch_bafu_hydrologie_niedrigwasserstatistik.hyperlink"
-msgstr "Link deutsch"
+msgstr "ch_bafu_hydrologie_niedrigwasserstatistik.hyperlink"
 
 msgid "ch_bafu_hydrologie_q347.BasisID"
 msgstr "Nr. Basisgebiet"
@@ -3555,38 +3683,49 @@ msgstr "URL zu Übersicht"
 msgid "ch_bafu_wasserbau_vermessungsstrecken.anfangsmass"
 msgstr "Anfangsmass"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.anzahl_profile"
-msgstr "Anzahl_Profile"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.anzahl_profile"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_intervall"
-msgstr "Aufnahme_Intervall"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_intervall"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_letzte"
-msgstr "Aufnahme_Letzte"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.aufnahme_letzte"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.bemerkung"
-msgstr "Bemerkung"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.bemerkung"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.bezeichnung"
-msgstr "Bezeichnung"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.bezeichnung"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.endmass"
-msgstr "Endmass"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.endmass"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.gewaessernummer"
-msgstr "Gewaessernummer"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.gewaessernummer"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.gwlnr"
-msgstr "Gewässerlaufnummer"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.gwlnr"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.laenge_km"
-msgstr "Laenge_KM"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.laenge_km"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.routeid"
-msgstr "Route_ID"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.routeid"
 
+#. TODO
 msgid "ch_bafu_wasserbau_vermessungsstrecken.streckenid"
-msgstr "StreckenID"
+msgstr "ch_bafu_wasserbau_vermessungsstrecken.streckenid"
 
 msgid "city_name"
 msgstr "Name der Ortschaft"
@@ -3730,9 +3869,6 @@ msgstr "Bouguer anomaly [mGal]"
 msgid "et_fromatt_ch"
 msgstr "Aeromagnetic anomalies Switzerland [nT]"
 
-msgid "exp"
-msgstr "Exposition"
-
 msgid "faktenblatt"
 msgstr "Fact sheet"
 
@@ -3771,15 +3907,6 @@ msgstr "Area [m2]"
 
 msgid "fliessgewaesser"
 msgstr "Fliessgewässer"
-
-msgid "fluss"
-msgstr "Flussname"
-
-msgid "fn"
-msgstr "Einzugsgebietsgrösse in km2"
-
-msgid "form"
-msgstr "Formfaktor L²/F"
 
 msgid "format_de"
 msgstr "Available formats"
@@ -3856,9 +3983,6 @@ msgstr "Unité tectonique"
 msgid "geol_f"
 msgstr "Unit"
 
-msgid "geologie_fr_de"
-msgstr "Geologie"
-
 msgid "geometalink"
 msgstr "Nachführungsgeometer"
 
@@ -3919,17 +4043,11 @@ msgstr "Phone"
 msgid "grundurl"
 msgstr "E-Mail / Web"
 
-msgid "gsch_n"
-msgstr "Identifikation des Geschiebesammlers"
-
 msgid "help title"
 msgstr "Help"
 
 msgid "help url"
 msgstr "http://www.geo.admin.ch/internet/geoportal/en/commons/help/viewer_help.html"
-
-msgid "herkunft"
-msgstr "Herkunft"
 
 msgid "hersteller"
 msgstr "Hersteller"
@@ -3939,15 +4057,6 @@ msgstr "Close Topics"
 
 msgid "hier"
 msgstr "Here"
-
-msgid "hmax"
-msgstr "Höchster Punkt im Einzugsgebiet (m)"
-
-msgid "hmed"
-msgstr "Mittlere Höhe des Einzugsgebietes (m)"
-
-msgid "hmin"
-msgstr "Tiefster Punkt im Einzugsgebiet (m)"
 
 msgid "hoehe_see"
 msgstr "Höhe über Meer des Seespiegels [m]"
@@ -4017,9 +4126,6 @@ msgstr "Infomation"
 
 msgid "installierteleistung"
 msgstr "Installierte Leistung"
-
-msgid "institut"
-msgstr "Institut"
 
 msgid "intern"
 msgstr "Intern"
@@ -4651,9 +4757,6 @@ msgstr "Length [m]"
 msgid "laenge_strecke_m"
 msgstr "Length of stretch [m]"
 
-msgid "lage"
-msgstr "Geographische Lage "
-
 msgid "lage_objekt"
 msgstr "Lage des Objekts in Bezug zum Gelände"
 
@@ -4711,9 +4814,6 @@ msgstr "Detaillierte Beschreibung"
 msgid "linkzurlegende"
 msgstr "Link zur Legende"
 
-msgid "lk"
-msgstr "Nummer des Landeskartenblattes "
-
 msgid "lokal"
 msgstr "lokal"
 
@@ -4752,45 +4852,6 @@ msgstr "Modell"
 
 msgid "modif_validfrom"
 msgstr "Date of enactment"
-
-msgid "mqn_apr"
-msgstr "Q Apr"
-
-msgid "mqn_aug"
-msgstr "Q Aug"
-
-msgid "mqn_dez"
-msgstr "Q Dez"
-
-msgid "mqn_feb"
-msgstr "Q Feb"
-
-msgid "mqn_jahr"
-msgstr "Q Jahr"
-
-msgid "mqn_jan"
-msgstr "Q Jan"
-
-msgid "mqn_jul"
-msgstr "Q Jul"
-
-msgid "mqn_jun"
-msgstr "Q Jun"
-
-msgid "mqn_mai"
-msgstr "Q Mai"
-
-msgid "mqn_mar"
-msgstr "Q Mar"
-
-msgid "mqn_nov"
-msgstr "Q Nov"
-
-msgid "mqn_okt"
-msgstr "Q Okt"
-
-msgid "mqn_sep"
-msgstr "Q Sep"
 
 msgid "municipality"
 msgstr "Betroffene Gemeinden"
@@ -4942,9 +5003,6 @@ msgstr "Perimeter [m]"
 msgid "physischvirtuell"
 msgstr "Physisch-virtuell"
 
-msgid "platz"
-msgstr "Ablagerungsplatz"
-
 msgid "plz"
 msgstr "Zip"
 
@@ -4983,12 +5041,6 @@ msgstr "Qualitätsstandard"
 
 msgid "raeumliche_qualitaeten"
 msgstr "Spatial qualities"
-
-msgid "regimenummer"
-msgstr "Regimenummer"
-
-msgid "regimetyp"
-msgstr "Regimetyp"
 
 msgid "regional"
 msgstr "regional"
@@ -5079,9 +5131,6 @@ msgstr "http://www.seismo.ethz.ch/index_EN"
 
 msgid "stand"
 msgstr "Stand"
-
-msgid "station"
-msgstr "Name der Messstation"
 
 msgid "stationsname"
 msgstr "Station name"
@@ -6230,9 +6279,6 @@ msgstr "http://www.twitter.com/swiss_geoportal"
 
 msgid "typ"
 msgstr "Type"
-
-msgid "typ_fr_de"
-msgstr "Typ"
 
 msgid "typ_kraftwerk"
 msgstr "Typ von Kraftwerk"
