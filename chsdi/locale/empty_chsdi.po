@@ -6986,3 +6986,6 @@ msgstr ""
 
 msgid "ch.bav.sachplan-infrastruktur-schifffahrt_ausgangslage.description_rm"
 msgstr ""
+
+msgid "tt_zeitreihen_FullResView"
+msgstr ""
