@@ -6971,3 +6971,6 @@ msgstr ""
 
 msgid "ch.bafu.neophyten-riesenbaerenklau"
 msgstr ""
+
+msgid "tt_zeitreihen_FullResView"
+msgstr ""
