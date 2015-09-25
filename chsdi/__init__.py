@@ -90,6 +90,7 @@ def main(global_config, **settings):
     config.add_route('files_collection', '/files')
     config.add_route('files', '/files/{id}')
     config.add_route('adminkml', '/admin/kml')
+    config.add_route('transports', '/transports/stops/{id}')
 
     # Some views for specific routes
     config.add_view(route_name='dev', renderer='chsdi:templates/index.mako')
