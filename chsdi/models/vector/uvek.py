@@ -11,6 +11,19 @@ from chsdi.models.vector import Vector
 Base = bases['uvek']
 
 
+class Oev_departures (Base):
+    __tablename__ = 'oev_departures'
+    __table_args__ = ({'schema': 'bav', 'autoload': False})
+    __template__ = 'templates/htmlpopup/oev_departures.mako'
+    __bodId__ = 'ch.bav.departures-oev'
+    __label__ = 'id'
+    id = Column('oid', Text, primary_key=True)
+    stop = Column('stop', Text)
+    time = Column('time', Text)
+
+register('ch.bav.departures-oev', Oev_departures)
+
+
 # IVS NAT and REG use the same template
 class SicherheitsZonenPlan (Base, Vector):
     __tablename__ = 'sichereitszonen'
