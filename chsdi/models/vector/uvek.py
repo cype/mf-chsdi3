@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from sqlalchemy import Column, Text, Integer, Date
+from sqlalchemy import Column, Text, Integer, Date, DateTime
 from geoalchemy2.types import Geometry
 from sqlalchemy.types import Numeric
 
@@ -19,7 +19,11 @@ class Oev_departures (Base):
     __label__ = 'id'
     id = Column('oid', Text, primary_key=True)
     stop = Column('stop', Text)
-    time = Column('time', Text)
+    time = Column('time', DateTime)
+    label = Column('label', Text)
+    destination = Column('destination', Text)
+    type = Column('type', Integer)
+    via = Column('via', Text)
 
 register('ch.bav.departures-oev', Oev_departures)
 
