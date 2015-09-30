@@ -27,39 +27,39 @@ class TransportView(object):
             if type == 0:
                 return 'Tram'
             elif type == 1:
-                return 'Bus/Tram'
-            elif type == 2:
                 return 'Metro'
+            elif type == 2:
+                return 'Train'
             elif type == 3:
                 return 'Bus'
             elif type == 4:
-                return 'Ascenseur'
+                return 'Bateau'
             elif type == 5:
                 return 'Telepherique'
             elif type == 6:
-                return 'Metro'
+                return 'Funiculaire'
             elif type == 7:
-                return 'Bateau'
+                return '7'
             elif type == 8:
-                return 'Bateau/Train'
+                return '8'
             elif type == 9:
-                return 'Funiclaire'
+                return '9'
             elif type == 10:
-                return 'Telepherique/Train'
+                return '10'
             elif type == 11:
-                return 'Funiclaire/Bus'
+                return '11'
             elif type == 12:
-                return 'Funiclaire/Telepherique'
+                return '12'
             elif type == 13:
-                return 'Funiclaire/Train'
+                return '13'
             elif type == 14:
-                return 'Taxi'
+                return '14'
             elif type == 15:
-                return 'Cremaillere'
+                return '15'
             elif type == 16:
-                return 'Train'
+                return '16'
             elif type == 17:
-                return 'Tram/Train'
+                return '17'
 
         results = [{
             'id': q.stop,
