@@ -28,6 +28,20 @@ class Oev_departures (Base):
 register('ch.bav.departures-oev', Oev_departures)
 
 
+class Oev_haltestellen (Base, Vector):
+    __tablename__ = 'oev_haltestellen'
+    __table_args__ = ({'schema': 'bav', 'autoload': False})
+    __template__ = 'templates/htmlpopup/oev_haltestellen.mako'
+    __bodId__ = 'ch.bav.haltestellen-oev'
+    __label__ = 'id'
+    id = Column('bgdi_id', Text, primary_key=True)
+    nummer = Column('nummer', Integer)
+    the_geom = Column(Geometry(geometry_type='GEOMETRY',
+                               dimension=2, srid=21781))
+
+register('ch.bav.haltestellen-oev', Oev_haltestellen)
+
+
 # IVS NAT and REG use the same template
 class SicherheitsZonenPlan (Base, Vector):
     __tablename__ = 'sichereitszonen'

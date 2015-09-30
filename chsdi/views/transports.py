@@ -23,12 +23,16 @@ class TransportView(object):
         def serialize(time):
             return time.strftime('%Y/%m/%d %H:%M:%S')
 
+        def type_transports(type):
+            if type == 3:
+                return 'Bus'
+
         results = [{
             'id': q.stop,
             'time': serialize(q.time),
             'label': q.label,
             'destination': q.destination,
             'via': q.via,
-            'type': q.type
+            'type': type_transports(q.type)
         } for q in query]
         return results
