@@ -24,8 +24,42 @@ class TransportView(object):
             return time.strftime('%Y/%m/%d %H:%M:%S')
 
         def type_transports(type):
-            if type == 3:
+            if type == 0:
+                return 'Tram'
+            elif type == 1:
+                return 'Bus/Tram'
+            elif type == 2:
+                return 'Metro'
+            elif type == 3:
                 return 'Bus'
+            elif type == 4:
+                return 'Ascenseur'
+            elif type == 5:
+                return 'Telepherique'
+            elif type == 6:
+                return 'Metro'
+            elif type == 7:
+                return 'Bateau'
+            elif type == 8:
+                return 'Bateau/Train'
+            elif type == 9:
+                return 'Funiclaire'
+            elif type == 10:
+                return 'Telepherique/Train'
+            elif type == 11:
+                return 'Funiclaire/Bus'
+            elif type == 12:
+                return 'Funiclaire/Telepherique'
+            elif type == 13:
+                return 'Funiclaire/Train'
+            elif type == 14:
+                return 'Taxi'
+            elif type == 15:
+                return 'Cremaillere'
+            elif type == 16:
+                return 'Train'
+            elif type == 17:
+                return 'Tram/Train'
 
         results = [{
             'id': q.stop,
