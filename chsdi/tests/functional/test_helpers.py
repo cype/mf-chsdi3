@@ -4,12 +4,32 @@ import unittest
 
 from pyramid import testing
 
-from chsdi.lib.helpers import make_agnostic, make_api_url, check_url, transformCoordinate, sanitize_url, check_even, round, format_search_text, remove_accents, escape_sphinx_syntax, quoting, float_raise_nan, resource_exists, parseHydroXML
+from chsdi.lib.helpers import make_agnostic, make_api_url, check_url, transformCoordinate, sanitize_url, check_even, round, format_search_text, remove_accents, escape_sphinx_syntax, quoting, float_raise_nan, resource_exists, parseHydroXML, locale_negotiator, versioned
 
 from urlparse import urljoin
 
 
 class Test_Helpers(unittest.TestCase):
+
+    def test_versioned(self):
+        import os.path
+        request = testing.DummyRequest()
+        request.host = 'api3.geo.admin.ch'
+        request.scheme = 'http'
+        request.registry.settings = {}
+        request.registry.settings['apache_base_path'] = 'main'
+
+        request.registry.settings['app_version'] = None
+        request.registry.settings['entry_path'] = 'https://api3.geo.admin.ch'
+        test_path = request.registry.settings['entry_path']
+        test_result = versioned(test_path)
+        self.assertTrue(test_result, 'https://api3.geo.admin.ch')
+
+        request.registry.settings['app_version'] = os.path.abspath('https://api3.geo.admin.ch')
+        request.registry.settings['entry_path'] = 'https://api3.geo.admin.ch'
+        test_path2 = request.registry.settings['entry_path']
+        test_result2 = versioned(test_path2)
+        self.assertTrue(test_result2, '//api3.geo.admin.ch')
 
     def test_make_agnostic(self):
         url = 'http://foo.com'
@@ -93,6 +113,27 @@ class Test_Helpers(unittest.TestCase):
 
         self.assertEqual(result2, urljoin(base_url_string, relative_url_string))
 
+    def test_local_negotiator(self):
+        request = testing.DummyRequest()
+        request.host = 'api3.geo.admin.ch'
+        request.scheme = 'http'
+        request.registry.settings = {}
+        request.registry.settings['apache_base_path'] = 'main'
+        request.registry.settings['available_languages'] = 'fr de it rm en'
+
+        request.params['lang'] = 'de'
+        test_result = locale_negotiator(request)
+        self.assertTrue(test_result, 'de')
+
+        request.params['lang'] = 'rm'
+        test_result2 = locale_negotiator(request)
+        self.assertTrue(test_result2, 'fi')
+
+        request.params['lang'] = None
+        request.accept_language = False  # I cannot check line 95
+        test_result3 = locale_negotiator(request)
+        self.assertTrue(test_result3, 'en')
+
     def test_sanitize_url_throws_ValueError(self):
         # ValueError
         url2 = None
@@ -130,16 +171,16 @@ class Test_Helpers(unittest.TestCase):
     def test_check_even(self):
         testnumber = 10
         result = check_even(testnumber)
-        self.assertEqual(result, True)
+        self.assertTrue(result)
 
         testnumber = 5
         result = check_even(testnumber)
-        self.assertEqual(result, False)
+        self.assertFalse(result)
 
     def test_round(self):
         testnumber = 4.4
         result = round(testnumber)
-        self.assertTrue(result == 4, result)
+        self.assertEqual(result, 4)
 
     def test_format_search_text(self):
         testinput_str = 'Hallo!'
@@ -153,20 +194,20 @@ class Test_Helpers(unittest.TestCase):
     def test_remove_accents(self):
         testinput_str = None
         result = remove_accents(testinput_str)
-        self.assertTrue(result is None, result)
+        self.assertEqual(result, None)
 
     def test_escape_sphinx_syntax(self):
         testinput_str = None
         result = escape_sphinx_syntax(testinput_str)
-        self.assertTrue(result is None, result)
+        self.assertEqual(result, None)
 
     def test_quoting(self):
         testtext = 'Hallo'
         result = quoting(testtext)
-        self.assertTrue(result == 'Hallo', result)
+        self.assertEqual(result, 'Hallo')
 
     def test_float_raise_nan(self):
         testval = 5
         result = float_raise_nan(testval)
-        self.assertTrue(result == 5.0, result)
-        self.assertFalse(result == 'ValueError', result)
+        self.assertEqual(result, 5.0)
+        self.assertRaises('ValueError')
